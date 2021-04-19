@@ -5,6 +5,7 @@
     <file type="web" url="file://D:/BaiduNetdiskDownload/CRM代码/workspaceForCrm/workspaceForCrm/crm" />
     <file type="web" url="file://D:/BaiduNetdiskDownload/Screenshots/代码/代码/atcrowdfunding-web" />
     <file type="web" url="file://$PROJECT_DIR$/213/crm" />
+    <file type="web" url="file://$PROJECT_DIR$/213/RBAC/atcrowdfunding-web" />
     <file type="web" url="file://$PROJECT_DIR$/ajax" />
     <file type="web" url="file://$PROJECT_DIR$/crm" />
     <file type="web" url="file://$PROJECT_DIR$/deptManage" />
@@ -30,6 +31,11 @@
         <option value="$PROJECT_DIR$/213/crm/pom.xml" />
         <option value="$PROJECT_DIR$/jedis/jedis/pom.xml" />
         <option value="$PROJECT_DIR$/213/crm/crm/pom.xml" />
+        <option value="$PROJECT_DIR$/213/RBAC/atcrowdfunding-web/pom.xml" />
+        <option value="$PROJECT_DIR$/213/RBAC/atcrowdfunding-common/pom.xml" />
+        <option value="$PROJECT_DIR$/213/RBAC/atcrowdfunding-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/213/RBAC/atcrowdfunding-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/213/RBAC/atcrowdfunding-portal/pom.xml" />
       </list>
     </option>
   </component>

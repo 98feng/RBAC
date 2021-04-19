@@ -7,14 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="crm" />
+        <module name="atcrowdfunding-web" />
         <module name="jedis" />
+        <module name="crm" />
+        <module name="atcrowdfunding-manager" />
+        <module name="atcrowdfunding-common" />
+        <module name="atcrowdfunding-portal" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="02-supermarket" target="1.7" />
       <module name="ajax" target="1.8" />
+      <module name="atcrowdfunding-common" target="1.5" />
       <module name="atcrowdfunding-manager" target="1.5" />
+      <module name="atcrowdfunding-parent" target="1.5" />
+      <module name="atcrowdfunding-portal" target="1.5" />
       <module name="atcrowdfunding-web" target="1.5" />
       <module name="chapter" target="1.8" />
       <module name="crm" target="1.7" />
