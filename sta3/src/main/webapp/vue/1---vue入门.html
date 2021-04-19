@@ -1,0 +1,31 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: feng
+ * @Date: 2021-02-28 08:52:13
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+			<script src="/src/main/webapp/js/vue.js"></script>	
+	</head>
+	<body>
+		<!-- 用来进行vue数据显示的dom元素 -->
+		<div id="app">
+			{{msg}}
+		</div>
+		<!-- 使用vue的语法，进行数据显示 -->
+		<script type="text/javascript">
+			// 创建vue的对象,进行数据处理
+			var vue = new Vue({
+				el:"#app",
+				data:{
+					msg:"hello Vue!"
+				}
+			});
+		</script>
+	</body>
+	
+</html>

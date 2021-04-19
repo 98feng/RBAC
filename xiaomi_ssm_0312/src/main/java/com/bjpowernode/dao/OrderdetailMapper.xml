@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.dao.OrderdetailMapper">
+  <resultMap id="BaseResultMap" type="com.bjpowernode.domain.Orderdetail">
+    <!--@mbg.generated-->
+    <!--@Table orderdetail-->
+    <id column="odid" property="odid" />
+    <result column="oid" property="oid" />
+    <result column="pid" property="pid" />
+    <result column="pnumber" property="pnumber" />
+    <result column="ptotal" property="ptotal" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <!--@mbg.generated-->
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <!--@mbg.generated-->
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    odid, oid, pid, pnumber, ptotal
+  </sql>
+  <select id="selectByExample" parameterType="com.bjpowernode.domain.OrderdetailExample" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from orderdetail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from orderdetail
+    where odid = #{odid}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from orderdetail
+    where odid = #{odid}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.bjpowernode.domain.OrderdetailExample">
+    <!--@mbg.generated-->
+    delete from orderdetail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="odid" keyProperty="odid" parameterType="com.bjpowernode.domain.Orderdetail" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into orderdetail (oid, pid, pnumber, ptotal)
+    values (#{oid}, #{pid}, #{pnumber}, #{ptotal})
+  </insert>
+  <insert id="insertSelective" keyColumn="odid" keyProperty="odid" parameterType="com.bjpowernode.domain.Orderdetail" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into orderdetail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="oid != null">
+        oid,
+      </if>
+      <if test="pid != null">
+        pid,
+      </if>
+      <if test="pnumber != null">
+        pnumber,
+      </if>
+      <if test="ptotal != null">
+        ptotal,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="oid != null">
+        #{oid},
+      </if>
+      <if test="pid != null">
+        #{pid},
+      </if>
+      <if test="pnumber != null">
+        #{pnumber},
+      </if>
+      <if test="ptotal != null">
+        #{ptotal},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.bjpowernode.domain.OrderdetailExample" resultType="java.lang.Long">
+    <!--@mbg.generated-->
+    select count(*) from orderdetail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    <!--@mbg.generated-->
+    update orderdetail
+    <set>
+      <if test="record.odid != null">
+        odid = #{record.odid},
+      </if>
+      <if test="record.oid != null">
+        oid = #{record.oid},
+      </if>
+      <if test="record.pid != null">
+        pid = #{record.pid},
+      </if>
+      <if test="record.pnumber != null">
+        pnumber = #{record.pnumber},
+      </if>
+      <if test="record.ptotal != null">
+        ptotal = #{record.ptotal},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    <!--@mbg.generated-->
+    update orderdetail
+    set odid = #{record.odid},
+      oid = #{record.oid},
+      pid = #{record.pid},
+      pnumber = #{record.pnumber},
+      ptotal = #{record.ptotal}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bjpowernode.domain.Orderdetail">
+    <!--@mbg.generated-->
+    update orderdetail
+    <set>
+      <if test="oid != null">
+        oid = #{oid},
+      </if>
+      <if test="pid != null">
+        pid = #{pid},
+      </if>
+      <if test="pnumber != null">
+        pnumber = #{pnumber},
+      </if>
+      <if test="ptotal != null">
+        ptotal = #{ptotal},
+      </if>
+    </set>
+    where odid = #{odid}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bjpowernode.domain.Orderdetail">
+    <!--@mbg.generated-->
+    update orderdetail
+    set oid = #{oid},
+      pid = #{pid},
+      pnumber = #{pnumber},
+      ptotal = #{ptotal}
+    where odid = #{odid}
+  </update>
+</mapper>

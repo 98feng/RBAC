@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.dao.UsersMapper">
+  <resultMap id="BaseResultMap" type="com.bjpowernode.domain.Users">
+    <!--@mbg.generated-->
+    <!--@Table users-->
+    <id column="userid" property="userid" />
+    <result column="uname" property="uname" />
+    <result column="upass" property="upass" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    userid, uname, upass
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from users
+    where userid = #{userid}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from users
+    where userid = #{userid}
+  </delete>
+  <insert id="insert" parameterType="com.bjpowernode.domain.Users">
+    <!--@mbg.generated-->
+    insert into users (userid, uname, upass)
+    values (#{userid}, #{uname}, #{upass})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bjpowernode.domain.Users">
+    <!--@mbg.generated-->
+    insert into users
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        userid,
+      </if>
+      <if test="uname != null">
+        uname,
+      </if>
+      <if test="upass != null">
+        upass,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        #{userid},
+      </if>
+      <if test="uname != null">
+        #{uname},
+      </if>
+      <if test="upass != null">
+        #{upass},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bjpowernode.domain.Users">
+    <!--@mbg.generated-->
+    update users
+    <set>
+      <if test="uname != null">
+        uname = #{uname},
+      </if>
+      <if test="upass != null">
+        upass = #{upass},
+      </if>
+    </set>
+    where userid = #{userid}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bjpowernode.domain.Users">
+    <!--@mbg.generated-->
+    update users
+    set uname = #{uname},
+      upass = #{upass}
+    where userid = #{userid}
+  </update>
+  <update id="updateBatch" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update users
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="uname = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when userid = #{item.userid} then #{item.uname}
+        </foreach>
+      </trim>
+      <trim prefix="upass = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when userid = #{item.userid} then #{item.upass}
+        </foreach>
+      </trim>
+    </trim>
+    where userid in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.userid}
+    </foreach>
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into users
+    (userid, uname, upass)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.userid}, #{item.uname}, #{item.upass})
+    </foreach>
+  </insert>
+</mapper>

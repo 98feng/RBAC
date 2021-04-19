@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>		
+		<script src="/src/main/webapp/js/jquery-1.11.1-min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn1").on("click",function(){
+					var $obj = $(":text");
+					$.each($obj,function(i,n){
+						alert(n)
+					})
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<br>
+		<input type="text" value="刘备"/>
+		<input type="text" value="关羽"/>
+		<input type="text" value="张飞"/><br><br>		
+		
+		<input type="button"  id="btn1" value="遍历dom对象数组"><br />
+		<input type="button" id="btn2" value="遍历普通数组"><br />
+		<input type="button" id="btn3" value="遍历json对象"><br />
+		
+	</body>
+</html>

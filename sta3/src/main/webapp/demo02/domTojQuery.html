@@ -1,0 +1,30 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: feng
+ * @Date: 2021-02-25 10:48:35
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/src/main/webapp/js/jquery-1.11.1-min.js"></script>
+    <script type="text/javascript">
+        function btnClick() {
+            //得到按钮
+            var btn = document.getElementById("btn");
+            //转成jQuery对象
+            var btnJquery = $(btn);
+            //test
+            alert(btnJquery.val())
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" id="btn" value="我要成为jQuery" onclick="btnClick()">
+</body>
+
+</html>

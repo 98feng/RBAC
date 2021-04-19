@@ -1,0 +1,8 @@
+com\bjpowernode\Bean.class
+com\bjpowernode\MyInvocationHandler.class
+com\bjpowernode\ApplicationContext.class
+com\bjpowernode\ReflectUtil.class
+com\bjpowernode\ServiceFactory.class
+com\bjpowernode\AutoWrite.class
+com\bjpowernode\JDBCUtils.class
+com\bjpowernode\DataSourceUtil.class

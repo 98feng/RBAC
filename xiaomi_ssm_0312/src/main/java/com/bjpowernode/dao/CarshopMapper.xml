@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.dao.CarshopMapper">
+  <resultMap id="BaseResultMap" type="com.bjpowernode.domain.Carshop">
+    <!--@mbg.generated-->
+    <!--@Table carshop-->
+    <id column="cid" property="cid" />
+    <result column="uid" property="uid" />
+    <result column="pid" property="pid" />
+    <result column="numbers" property="numbers" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <!--@mbg.generated-->
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <!--@mbg.generated-->
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    cid, `uid`, pid, numbers
+  </sql>
+  <select id="selectByExample" parameterType="com.bjpowernode.domain.CarshopExample" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from carshop
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from carshop
+    where cid = #{cid}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from carshop
+    where cid = #{cid}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.bjpowernode.domain.CarshopExample">
+    <!--@mbg.generated-->
+    delete from carshop
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="cid" keyProperty="cid" parameterType="com.bjpowernode.domain.Carshop" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into carshop (`uid`, pid, numbers)
+    values (#{uid}, #{pid}, #{numbers})
+  </insert>
+  <insert id="insertSelective" keyColumn="cid" keyProperty="cid" parameterType="com.bjpowernode.domain.Carshop" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into carshop
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        `uid`,
+      </if>
+      <if test="pid != null">
+        pid,
+      </if>
+      <if test="numbers != null">
+        numbers,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        #{uid},
+      </if>
+      <if test="pid != null">
+        #{pid},
+      </if>
+      <if test="numbers != null">
+        #{numbers},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.bjpowernode.domain.CarshopExample" resultType="java.lang.Long">
+    <!--@mbg.generated-->
+    select count(*) from carshop
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    <!--@mbg.generated-->
+    update carshop
+    <set>
+      <if test="record.cid != null">
+        cid = #{record.cid},
+      </if>
+      <if test="record.uid != null">
+        `uid` = #{record.uid},
+      </if>
+      <if test="record.pid != null">
+        pid = #{record.pid},
+      </if>
+      <if test="record.numbers != null">
+        numbers = #{record.numbers},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    <!--@mbg.generated-->
+    update carshop
+    set cid = #{record.cid},
+      `uid` = #{record.uid},
+      pid = #{record.pid},
+      numbers = #{record.numbers}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bjpowernode.domain.Carshop">
+    <!--@mbg.generated-->
+    update carshop
+    <set>
+      <if test="uid != null">
+        `uid` = #{uid},
+      </if>
+      <if test="pid != null">
+        pid = #{pid},
+      </if>
+      <if test="numbers != null">
+        numbers = #{numbers},
+      </if>
+    </set>
+    where cid = #{cid}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bjpowernode.domain.Carshop">
+    <!--@mbg.generated-->
+    update carshop
+    set `uid` = #{uid},
+      pid = #{pid},
+      numbers = #{numbers}
+    where cid = #{cid}
+  </update>
+</mapper>

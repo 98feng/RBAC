@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="library:war">
+    <output-path>D:/BaiduNetdiskDownload/图书馆管理系统源码 最新(1)/图书馆管理系统源码/library/library/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>library</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="jeecg.war">
+      <element id="artifact" artifact-name="library:war exploded" />
+    </root>
+  </artifact>
+</component>

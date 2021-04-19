@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.dao.AccountsMapper">
+  <resultMap id="BaseResultMap" type="com.bjpowernode.domain.Accounts">
+    <!--@mbg.generated-->
+    <!--@Table accounts-->
+    <id column="aid" property="aid" />
+    <result column="aname" property="aname" />
+    <result column="acontent" property="acontent" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    aid, aname, acontent
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from accounts
+    where aid = #{aid}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from accounts
+    where aid = #{aid}
+  </delete>
+  <insert id="insert" parameterType="com.bjpowernode.domain.Accounts">
+    <!--@mbg.generated-->
+    insert into accounts (aid, aname, acontent)
+    values (#{aid}, #{aname}, #{acontent})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bjpowernode.domain.Accounts">
+    <!--@mbg.generated-->
+    insert into accounts
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="aid != null">
+        aid,
+      </if>
+      <if test="aname != null">
+        aname,
+      </if>
+      <if test="acontent != null">
+        acontent,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="aid != null">
+        #{aid},
+      </if>
+      <if test="aname != null">
+        #{aname},
+      </if>
+      <if test="acontent != null">
+        #{acontent},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bjpowernode.domain.Accounts">
+    <!--@mbg.generated-->
+    update accounts
+    <set>
+      <if test="aname != null">
+        aname = #{aname},
+      </if>
+      <if test="acontent != null">
+        acontent = #{acontent},
+      </if>
+    </set>
+    where aid = #{aid}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bjpowernode.domain.Accounts">
+    <!--@mbg.generated-->
+    update accounts
+    set aname = #{aname},
+      acontent = #{acontent}
+    where aid = #{aid}
+  </update>
+  <update id="updateBatch" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update accounts
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="aname = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when aid = #{item.aid} then #{item.aname}
+        </foreach>
+      </trim>
+      <trim prefix="acontent = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when aid = #{item.aid} then #{item.acontent}
+        </foreach>
+      </trim>
+    </trim>
+    where aid in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.aid}
+    </foreach>
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into accounts
+    (aid, aname, acontent)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.aid}, #{item.aname}, #{item.acontent})
+    </foreach>
+  </insert>
+</mapper>

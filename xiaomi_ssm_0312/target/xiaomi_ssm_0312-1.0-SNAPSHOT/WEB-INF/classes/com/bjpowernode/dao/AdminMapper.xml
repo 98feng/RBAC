@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.dao.AdminMapper">
+  <resultMap id="BaseResultMap" type="com.bjpowernode.domain.Admin">
+    <!--@mbg.generated-->
+    <!--@Table `admin`-->
+    <id column="a_id" property="aId" />
+    <result column="a_name" property="aName" />
+    <result column="a_pass" property="aPass" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    a_id, a_name, a_pass
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from `admin`
+    where a_id = #{aId}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from `admin`
+    where a_id = #{aId}
+  </delete>
+  <insert id="insert" keyColumn="a_id" keyProperty="aId" parameterType="com.bjpowernode.domain.Admin" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into `admin` (a_name, a_pass)
+    values (#{aName}, #{aPass})
+  </insert>
+  <insert id="insertSelective" keyColumn="a_id" keyProperty="aId" parameterType="com.bjpowernode.domain.Admin" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into `admin`
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="aName != null">
+        a_name,
+      </if>
+      <if test="aPass != null">
+        a_pass,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="aName != null">
+        #{aName},
+      </if>
+      <if test="aPass != null">
+        #{aPass},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bjpowernode.domain.Admin">
+    <!--@mbg.generated-->
+    update `admin`
+    <set>
+      <if test="aName != null">
+        a_name = #{aName},
+      </if>
+      <if test="aPass != null">
+        a_pass = #{aPass},
+      </if>
+    </set>
+    where a_id = #{aId}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bjpowernode.domain.Admin">
+    <!--@mbg.generated-->
+    update `admin`
+    set a_name = #{aName},
+      a_pass = #{aPass}
+    where a_id = #{aId}
+  </update>
+  <update id="updateBatch" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update `admin`
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="a_name = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when a_id = #{item.aId} then #{item.aName}
+        </foreach>
+      </trim>
+      <trim prefix="a_pass = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when a_id = #{item.aId} then #{item.aPass}
+        </foreach>
+      </trim>
+    </trim>
+    where a_id in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.aId}
+    </foreach>
+  </update>
+  <insert id="batchInsert" keyColumn="a_id" keyProperty="aId" parameterType="map" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into `admin`
+    (a_name, a_pass)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.aName}, #{item.aPass})
+    </foreach>
+  </insert>
+  <select id="login" resultMap="BaseResultMap">
+            select
+    <include refid="Base_Column_List" />
+    from `admin` where a_name = #{aName} and a_pass = #{aPass}
+    </select>
+
+
+</mapper>

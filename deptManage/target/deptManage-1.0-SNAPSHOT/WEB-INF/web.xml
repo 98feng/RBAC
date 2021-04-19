@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+    <display-name>deptManage</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.bjpowernode.deptmanage.web.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.bjpowernode.deptmanage.web.filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+
+    <!--登录验证控制器-->
+    <servlet>
+        <servlet-name>UserController</servlet-name>
+        <servlet-class>com.bjpowernode.deptmanage.settings.web.controller.UserController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserController</servlet-name>
+        <url-pattern>/settings/user/login.do</url-pattern>
+    </servlet-mapping>
+
+    <!--  信息活动控制器-->
+    <servlet>
+        <servlet-name>ActivityController</servlet-name>
+        <servlet-class>com.bjpowernode.deptmanage.workbench.web.controller.DeptActivityController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ActivityController</servlet-name>
+        <url-pattern>/workbench/deptActivity/getUserList.do</url-pattern>
+        <url-pattern>/workbench/deptActivity/creatActivity.do</url-pattern>
+        <url-pattern>/workbench/deptActivity/pageList.do</url-pattern>
+        <url-pattern>/workbench/deptActivity/delete.do</url-pattern>
+        <url-pattern>/workbench/deptActivity/getUserListAndActivity.do</url-pattern>
+        <url-pattern>/workbench/deptActivity/update.do</url-pattern>
+        <url-pattern>/workbench/deptActivity/detail.do</url-pattern>
+        <url-pattern>/workbench/deptActivity/getRemarkListByAid.do</url-pattern>
+        <url-pattern>/workbench/deptActivity/deleteRemark.do</url-pattern>
+        <url-pattern>/workbench/deptActivity/saveRemark.do</url-pattern>
+        <url-pattern>/workbench/deptActivity/updateRemark.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ActivityController2</servlet-name>
+        <servlet-class>com.bjpowernode.deptmanage.workbench.web.controller.EmpActivityController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ActivityController2</servlet-name>
+        <url-pattern>/workbench/empActivity/getUserList.do</url-pattern>
+        <url-pattern>/workbench/empActivity/creatActivity.do</url-pattern>
+        <url-pattern>/workbench/empActivity/pageList.do</url-pattern>
+        <url-pattern>/workbench/empActivity/delete.do</url-pattern>
+        <url-pattern>/workbench/empActivity/getUserListAndActivity.do</url-pattern>
+        <url-pattern>/workbench/empActivity/update.do</url-pattern>
+        <url-pattern>/workbench/empActivity/detail.do</url-pattern>
+        <url-pattern>/workbench/empActivity/getRemarkListByAid.do</url-pattern>
+        <url-pattern>/workbench/empActivity/deleteRemark.do</url-pattern>
+        <url-pattern>/workbench/empActivity/saveRemark.do</url-pattern>
+        <url-pattern>/workbench/empActivity/updateRemark.do</url-pattern>
+    </servlet-mapping>
+
+</web-app>

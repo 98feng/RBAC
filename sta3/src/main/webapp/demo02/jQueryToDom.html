@@ -1,0 +1,37 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: feng
+ * @Date: 2021-02-25 10:58:08
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/src/main/webapp/js/jquery-1.11.1-min.js"></script>
+    <script type="text/javascript">
+
+
+        function btnClick() {
+            //去值
+            var txt = $("#txt")
+
+            //转换，计算
+            // var dom = txt[0];//已经是dom对象
+            var dom = txt.get(0);//已经是dom对象
+
+            var mul = dom.value * dom.value;
+
+            dom.value = mul;
+        }
+    </script>
+</head>
+
+<body>
+    <input id="txt" value="2"><br>
+    <input type="button" id="btn" value="计算平方" onclick="btnClick()">
+</body>
+
+</html>

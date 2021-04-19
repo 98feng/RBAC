@@ -1,0 +1,71 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: feng
+ * @Date: 2021-01-30 18:14:07
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.text_center{text-align: center;}.center {margin: auto 0px;}.float_left {float: left;}
+		.center {
+			position: relative;
+			height: 500px;
+		}
+		.center_text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 300px;
+			height: 600px;
+		}
+	</style>
+	<script type="text/javascript" src="/src/main/webapp/js/jQuery.js">
+	</script>
+
+</head>
+
+<body>
+	<span class="center_text">
+		<div name="two">这是第一个DIV</div>
+		<div name="two">这是第二个DIV</div>
+		<div id="three" name="two">这是第三个DIV</div>
+		<div name="two">这是第四个DIV</div>
+		<div name="two">这是第五个DIV</div>
+		<div name="two">这是第六个DIV</div>
+
+
+
+
+		<input type="button" value="定位页面中第一个DIV" onclick="fun1()">
+		<input type="button" value="定位页面中最后一个DIV" onclick="fun2()">
+		<input type="button" value="定位页面中第二个DIV" onclick="fun3()">
+
+	</span>
+	
+	<script type="text/javascript">
+		function fun1() {
+			var domArray = $("div:first");
+			var dom = domArray[0];
+			alert(dom.innerHTML);
+		}
+		function fun2() {
+			var domArray = $("div:last");
+			var dom = domArray[0];
+			alert(dom.innerHTML);
+		}
+		function fun3() {
+			var domArray = $("div:eq(1)");
+			var dom = domArray[0];
+			alert(dom.innerHTML);
+		}	
+	</script>
+</body>
+
+</html>

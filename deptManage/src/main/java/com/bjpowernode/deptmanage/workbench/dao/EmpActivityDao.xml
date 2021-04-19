@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.deptmanage.workbench.dao.EmpActivityDao">
+    <insert id="creatActivity">
+
+
+
+
+    insert into
+
+        tbl_emp_activity
+        (id,
+        owner,
+        ename,
+        job,
+        sal,
+        comm,
+        mgr,
+        startDate,
+        endDate,
+        description,
+        createTime,
+        createBy)
+    values
+
+        (#{id},
+        #{owner},
+        #{ename},
+        #{job},
+        #{sal},
+        #{comm},
+        #{mgr},
+        #{startDate},
+        #{endDate},
+        #{description},
+        #{createTime},
+        #{createBy})
+
+
+
+
+    </insert>
+
+    <select id="getActivityListByName" resultType="EmpActivity">
+
+
+
+        select
+
+        a.id,
+        a.ename,
+        a.job,
+        a.sal,
+        a.comm,
+        a.mgr,
+        a.startDate,
+        a.endDate,
+        u.name as owner
+
+        from tbl_emp_activity a
+        join tbl_user u
+        on a.owner=u.id
+
+
+
+
+    </select>
+
+
+    <select id="detail" resultType="EmpActivity">
+
+
+
+        select
+
+        a.id,
+        u.name as owner,
+        a.ename,
+        a.job,
+        a.mgr,
+        a.sal,
+        a.comm,
+        a.startDate,
+        a.endDate,
+        a.description,
+        a.createTime,
+        a.createBy,
+        a.editTime,
+        a.editBy
+
+
+        from tbl_emp_activity a
+        join tbl_user u
+        on a.owner=u.id
+
+        where a.id=#{id}
+
+
+
+
+    </select>
+
+    <update id="update">
+
+
+
+        update tbl_emp_activity set
+
+        owner=#{owner},
+        ename=#{ename},
+        sal=#{sal},
+        comm=#{comm},
+        job=#{job},
+        mgr=#{mgr},
+        startDate=#{startDate},
+        endDate=#{endDate},
+        description=#{description},
+        editTime=#{editTime},
+        editBy=#{editBy}
+
+        where id=#{id}
+
+
+
+
+
+    </update>
+
+    <select id="getById" resultType="EmpActivity">
+
+
+
+        select * from tbl_emp_activity where id=#{id}
+
+
+
+
+    </select>
+
+    <delete id="delete">
+
+
+
+        delete from tbl_emp_activity
+
+        where id in
+
+
+        <foreach collection="array" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="getTotalByCondition" resultType="int">
+
+
+
+        select count(*)
+
+        from tbl_emp_activity a
+        join tbl_user u
+        on a.owner=u.id
+
+
+
+        <where>
+            <if test="owner != null and owner != ''">
+                and u.name like '%' #{owner} '%'
+
+
+
+            </if>
+            <if test="ename != null and ename != ''">
+
+
+                and a.ename = #{ename}
+
+
+            </if>
+
+            <if test="sal != null and sal != ''">
+
+
+                and a.sal = #{sal}
+
+
+            </if>
+            <if test="job != null and job != ''">
+
+
+                and a.job = #{job}
+
+
+            </if>
+            <if test="comm != null and comm != ''">
+
+
+                and a.comm = #{comm}
+
+
+            </if>
+            <if test="mgr != null and mgr != ''">
+
+
+                and a.mgr = #{mgr}
+
+
+            </if>
+
+            <if test="startDate != null and startDate != ''">
+
+
+
+                and a.startDate &gt; #{startDate}
+
+
+
+            </if>
+
+            <if test="endDate != null and endDate != ''">
+
+
+
+                and a.endDate &lt; #{endDate}
+            </if>
+        </where>
+    </select>
+
+    <select id="getActivityListByCondition" resultType="EmpActivity">
+
+
+
+        select
+
+        a.id,
+        u.name as owner,
+        a.ename,
+        a.sal,
+        a.comm,
+        a.job,
+        a.mgr,
+        a.startDate,
+        a.endDate
+
+        from tbl_emp_activity a
+        join tbl_user u
+        on a.owner=u.id
+
+
+
+        <where>
+            <if test="owner != null and owner != ''">
+                and u.name like '%' #{owner} '%'
+
+
+            </if>
+
+
+            <if test="ename != null and ename != ''">
+
+
+                and a.ename = #{ename}
+
+
+            </if>
+
+            <if test="sal != null and sal != ''">
+
+
+                and a.sal = #{sal}
+
+
+            </if>
+            <if test="job != null and job != ''">
+
+
+                and a.job = #{job}
+
+
+            </if>
+            <if test="comm != null and comm != ''">
+
+
+                and a.comm = #{comm}
+
+
+            </if>
+            <if test="mgr != null and mgr != ''">
+
+
+                and a.mgr = #{mgr}
+
+
+            </if>
+
+            <if test="startDate != null and startDate != ''">
+
+
+
+                and a.startDate &gt; #{startDate}
+
+
+
+            </if>
+
+            <if test="endDate != null and endDate != ''">
+
+
+
+                and a.endDate &lt; #{endDate}
+            </if>
+        </where>
+
+
+
+        order by a.createTime desc
+
+        limit #{skipCount},#{pageSize}
+
+
+
+
+    </select>
+</mapper>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="cs-1.0-SNAPSHOT (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/demo1/src/com/bjpowernode/jdbc/lib/cs-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/demo1/src/com/bjpowernode/jdbc/lib/cs-1.0-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../cs/target/cs-1.0-SNAPSHOT.jar!/" />
+    </SOURCES>
+  </library>
+</component>

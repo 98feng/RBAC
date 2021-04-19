@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="crm" />
+        <module name="jedis" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="02-supermarket" target="1.7" />
+      <module name="ajax" target="1.8" />
+      <module name="atcrowdfunding-manager" target="1.5" />
+      <module name="atcrowdfunding-web" target="1.5" />
+      <module name="chapter" target="1.8" />
+      <module name="crm" target="1.7" />
+      <module name="crm (1)" target="1.5" />
+      <module name="demo" target="1.8" />
+      <module name="deptManage" target="1.8" />
+      <module name="homework" target="1.8" />
+      <module name="jdbc_1" target="1.8" />
+      <module name="jedis" target="1.8" />
+      <module name="mybatis" target="1.8" />
+      <module name="mybatis-one2many" target="1.8" />
+      <module name="mybatis-proxy" target="1.8" />
+      <module name="mybatis_spring" target="1.8" />
+      <module name="mySSM" target="1.8" />
+      <module name="myweb" target="1.8" />
+      <module name="proxy" target="1.8" />
+      <module name="spring" target="1.8" />
+      <module name="springMVC" target="1.8" />
+      <module name="springmvc_003_datasubmit" target="1.8" />
+      <module name="springmvc_003_datasubmit (1)" target="1.8" />
+      <module name="springMVC_datasubmit" target="1.8" />
+      <module name="springMVCstusub" target="1.8" />
+      <module name="static_proxy" target="1.7" />
+      <module name="xiaomi_ssm_0312" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
+    </option>
+  </component>
+</project>

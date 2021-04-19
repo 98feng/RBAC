@@ -1,0 +1,65 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: feng
+ * @Date: 2021-02-25 11:21:09
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>		
+
+		<script src="/src/main/webapp/js/jquery-1.11.1-min.js">
+		</script>
+		<script type="text/javascript">
+
+			$(function(){
+
+				$("#btn1").click(function(){
+
+					$("div:first").css("background","red");
+				})
+
+
+				$("#btn2").click(function(){
+
+					$("div:last").css("background","red")
+				})
+
+				$("#btn3").click(function(){
+
+					$("div:eq(3)").css("background","blue");
+				})
+
+				$("#btn4").click(function(){
+
+					$("div:lt(3)").css("background","yellow");
+				})
+
+				$("#btn5").click(function(){
+					$("div:gt(3)").css("background","blue");
+				})
+			});
+
+
+		</script>
+	</head>
+	<body>
+		<div>我是div-0</div>
+		<div>我是div-1</div>
+		<div>
+			我是第三个div-2
+			<div>我是div-3</div>
+			<div>我是div-4</div>
+		</div>
+		<div>我是div-5</div>
+		<p>功能按钮</p>
+		<input type="button" id="btn1" value="选择第一个div" ><br />
+		<input type="button" id="btn2" value="选择最后一个div"><br />
+		<input type="button" id="btn3" value="选择索引等于3的div"><br />
+		<input type="button" id="btn4" value="选择索引小于3的div"><br />
+		<input type="button" id="btn5" value="选择索引大于3的div"><br />
+
+	</body>
+</html>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.dao.XmorderMapper">
+  <resultMap id="BaseResultMap" type="com.bjpowernode.domain.Xmorder">
+    <!--@mbg.generated-->
+    <!--@Table xmorder-->
+    <id column="oid" property="oid" />
+    <result column="uid" property="uid" />
+    <result column="addressId" property="addressid" />
+    <result column="totalprice" property="totalprice" />
+    <result column="remarks" property="remarks" />
+    <result column="status" property="status" />
+    <result column="odate" property="odate" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <!--@mbg.generated-->
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <!--@mbg.generated-->
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    oid, `uid`, addressId, totalprice, remarks, `status`, odate
+  </sql>
+  <select id="selectByExample" parameterType="com.bjpowernode.domain.XmorderExample" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from xmorder
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from xmorder
+    where oid = #{oid}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from xmorder
+    where oid = #{oid}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.bjpowernode.domain.XmorderExample">
+    <!--@mbg.generated-->
+    delete from xmorder
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.bjpowernode.domain.Xmorder">
+    <!--@mbg.generated-->
+    insert into xmorder (oid, `uid`, addressId, totalprice, remarks, `status`, odate
+      )
+    values (#{oid}, #{uid}, #{addressid}, #{totalprice}, #{remarks}, #{status}, #{odate}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.bjpowernode.domain.Xmorder">
+    <!--@mbg.generated-->
+    insert into xmorder
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="oid != null">
+        oid,
+      </if>
+      <if test="uid != null">
+        `uid`,
+      </if>
+      <if test="addressid != null">
+        addressId,
+      </if>
+      <if test="totalprice != null">
+        totalprice,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="odate != null">
+        odate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="oid != null">
+        #{oid},
+      </if>
+      <if test="uid != null">
+        #{uid},
+      </if>
+      <if test="addressid != null">
+        #{addressid},
+      </if>
+      <if test="totalprice != null">
+        #{totalprice},
+      </if>
+      <if test="remarks != null">
+        #{remarks},
+      </if>
+      <if test="status != null">
+        #{status},
+      </if>
+      <if test="odate != null">
+        #{odate},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.bjpowernode.domain.XmorderExample" resultType="java.lang.Long">
+    <!--@mbg.generated-->
+    select count(*) from xmorder
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    <!--@mbg.generated-->
+    update xmorder
+    <set>
+      <if test="record.oid != null">
+        oid = #{record.oid},
+      </if>
+      <if test="record.uid != null">
+        `uid` = #{record.uid},
+      </if>
+      <if test="record.addressid != null">
+        addressId = #{record.addressid},
+      </if>
+      <if test="record.totalprice != null">
+        totalprice = #{record.totalprice},
+      </if>
+      <if test="record.remarks != null">
+        remarks = #{record.remarks},
+      </if>
+      <if test="record.status != null">
+        `status` = #{record.status},
+      </if>
+      <if test="record.odate != null">
+        odate = #{record.odate},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    <!--@mbg.generated-->
+    update xmorder
+    set oid = #{record.oid},
+      `uid` = #{record.uid},
+      addressId = #{record.addressid},
+      totalprice = #{record.totalprice},
+      remarks = #{record.remarks},
+      `status` = #{record.status},
+      odate = #{record.odate}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bjpowernode.domain.Xmorder">
+    <!--@mbg.generated-->
+    update xmorder
+    <set>
+      <if test="uid != null">
+        `uid` = #{uid},
+      </if>
+      <if test="addressid != null">
+        addressId = #{addressid},
+      </if>
+      <if test="totalprice != null">
+        totalprice = #{totalprice},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks},
+      </if>
+      <if test="status != null">
+        `status` = #{status},
+      </if>
+      <if test="odate != null">
+        odate = #{odate},
+      </if>
+    </set>
+    where oid = #{oid}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bjpowernode.domain.Xmorder">
+    <!--@mbg.generated-->
+    update xmorder
+    set `uid` = #{uid},
+      addressId = #{addressid},
+      totalprice = #{totalprice},
+      remarks = #{remarks},
+      `status` = #{status},
+      odate = #{odate}
+    where oid = #{oid}
+  </update>
+</mapper>

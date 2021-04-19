@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cs-1.0-SNAPSHOT (3)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/基于spi将耦合/src/lib/cs-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

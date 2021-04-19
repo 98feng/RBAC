@@ -1,0 +1,37 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: feng
+ * @Date: 2021-02-25 18:56:50
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/src/main/webapp/js/jquery-1.11.1-min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#qx").click(function () {
+                $("input[name=xz]").prop("checked", this.checked);
+            })
+            $("input[name=xz]").click(function () {
+                $("#qx").prop("checked", $("input[name=xz]").length === $("input[name=xz]:checked").length);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div><input type="checkbox" name="" id="qx">全选</div>
+    <div>
+        <input type="checkbox" name="xz">A<br>
+        <input type="checkbox" name="xz">B<br>
+        <input type="checkbox" name="xz">C<br>
+        <input type="checkbox" name="xz">D<br>
+    </div>
+</body>
+
+</html>

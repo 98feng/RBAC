@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.dao.UsersMapper">
+    <resultMap id="BaseResultMap" type="com.bjpowernode.ioc.domain.Users">
+        <!--@mbg.generated-->
+        <!--@Table users-->
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="birthday" property="birthday"/>
+        <result column="sex" property="sex"/>
+        <result column="address" property="address"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, username, birthday, sex, address
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+    select 
+
+        <include refid="Base_Column_List"/>
+
+    from users
+    where id = #{id}
+
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        <!--@mbg.generated-->
+    delete from users
+    where id = #{id}
+
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.bjpowernode.ioc.domain.Users"
+            useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        <selectKey keyProperty="id" resultType="string" order="BEFORE">
+
+    select UUID()
+
+        </selectKey>
+
+    insert into users (username, birthday, sex, address)
+    values (#{username}, #{birthday}, #{sex}, #{address})
+
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.bjpowernode.ioc.domain.Users"
+            useGeneratedKeys="true">
+        <!--@mbg.generated-->
+    insert into users
+
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="username != null">
+                username,
+
+            </if>
+            <if test="birthday != null">
+
+        birthday,
+
+            </if>
+            <if test="sex != null">
+
+        sex,
+
+            </if>
+            <if test="address != null">
+
+        address,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="username != null">
+                #{username},
+
+            </if>
+            <if test="birthday != null">
+
+        #{birthday},
+
+            </if>
+            <if test="sex != null">
+
+        #{sex},
+
+            </if>
+            <if test="address != null">
+
+        #{address},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.bjpowernode.ioc.domain.Users">
+        <!--@mbg.generated-->
+    update users
+
+        <set>
+            <if test="username != null">
+                username = #{username},
+
+            </if>
+            <if test="birthday != null">
+
+        birthday = #{birthday},
+
+            </if>
+            <if test="sex != null">
+
+        sex = #{sex},
+
+            </if>
+            <if test="address != null">
+
+        address = #{address},
+            </if>
+        </set>
+
+    where id = #{id}
+
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.bjpowernode.ioc.domain.Users">
+        <!--@mbg.generated-->
+    update users
+    set username = #{username},
+      birthday = #{birthday},
+      sex = #{sex},
+      address = #{address}
+    where id = #{id}
+
+    </update>
+    <update id="updateBatch" parameterType="java.util.List">
+        <!--@mbg.generated-->
+    update users
+
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix="userName = case" suffix="end,">
+                <foreach collection="list" index="index" item="item">
+                    when id = #{item.id} then #{item.username}
+                </foreach>
+            </trim>
+            <trim prefix="birthday = case" suffix="end,">
+                <foreach collection="list" index="index" item="item">
+                    when id = #{item.id} then #{item.birthday}
+                </foreach>
+            </trim>
+            <trim prefix="sex = case" suffix="end,">
+                <foreach collection="list" index="index" item="item">
+                    when id = #{item.id} then #{item.sex}
+                </foreach>
+            </trim>
+            <trim prefix="address = case" suffix="end,">
+                <foreach collection="list" index="index" item="item">
+                    when id = #{item.id} then #{item.address}
+                </foreach>
+            </trim>
+        </trim>
+
+    where id in
+
+        <foreach close=")" collection="list" item="item" open="(" separator=", ">
+            #{item.id}
+        </foreach>
+    </update>
+    <insert id="batchInsert" keyColumn="id" keyProperty="id" parameterType="map" useGeneratedKeys="true">
+        <!--@mbg.generated-->
+    insert into users
+    (username, birthday, sex, address)
+    values
+
+        <foreach collection="list" item="item" separator=",">
+            (#{item.username}, #{item.birthday}, #{item.sex}, #{item.address})
+        </foreach>
+    </insert>
+
+    <delete id="deleteBatch" >
+        delete from users where id in
+        <foreach collection="array" item="id" separator="," open="(" close=")">
+        #{id}
+</foreach>
+</delete>
+
+<select id="getByNameOrGender"  resultType="java.util.Map">
+    select  <include refid="Base_Column_List"></include>
+    from users
+    where username like '%${arg0}%' or sex = #{arg1}
+</select>
+</mapper>

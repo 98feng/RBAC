@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac2b36c5-efe7-4811-acf8-cd66885f279e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="code" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
+  <component name="ProjectId" id="1klYdk9PjNvCbqM7VoBfyhPOZ1h" />
+  <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/day04/src.main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day04/src.main/java/bjpowernode/test" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\bjpowernode\code\day04\src.main\java\bjpowernode\test" />
+      <recent name="E:\bjpowernode\code\day04\src.main\java\bjpowernode\test\circle" />
+      <recent name="E:\bjpowernode\code\day04\src.main\java\bjpowernode\test\single" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\bjpowernode\code\day02\bjpowernode.test\java" />
+      <recent name="E:\bjpowernode\code\day02\bjpowernode.test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SingleCircleLinkedListTest">
+    <configuration name="ArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bjpowernode.test.ArrayList" />
+      <module name="day04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bjpowernode.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bjpowernode.test.demo.Main" />
+      <module name="day04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bjpowernode.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleCircleLinkedListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bjpowernode.test.mj.Test.SingleCircleLinkedListTest" />
+      <module name="day04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bjpowernode.test.mj.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bjpowernode.test.demo.Test" />
+      <module name="day04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bjpowernode.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="domain.test01" />
+      <module name="day03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bjpowernode.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SingleCircleLinkedListTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.ArrayList" />
+        <item itemvalue="Application.test01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac2b36c5-efe7-4811-acf8-cd66885f279e" name="Default Changelist" comment="" />
+      <created>1606276734432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606276734432</updated>
+      <workItem from="1606276738596" duration="3703000" />
+      <workItem from="1606298673797" duration="4621000" />
+      <workItem from="1606384758128" duration="1482000" />
+      <workItem from="1606393423260" duration="2248000" />
+      <workItem from="1606439570743" duration="829000" />
+      <workItem from="1606489640300" duration="2408000" />
+      <workItem from="1606629488021" duration="10772000" />
+      <workItem from="1606723158251" duration="101000" />
+      <workItem from="1606732950473" duration="208000" />
+      <workItem from="1606869384246" duration="9775000" />
+      <workItem from="1607067232680" duration="3805000" />
+      <workItem from="1607073528608" duration="49000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="46" key="#Project_Structure" timestamp="1606873065448">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="46" key="#Project_Structure/0.0.1366.768@0.0.1366.768" timestamp="1606873065448" />
+    <state x="458" y="92" key="#com.intellij.ide.util.MemberChooser" timestamp="1607069713062">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="458" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1607069713062" />
+    <state x="404" y="316" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1606630092274">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="404" y="316" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.768@0.0.1366.768" timestamp="1606630092274" />
+    <state x="357" y="256" width="651" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606872881640">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="357" y="256" width="651" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.768@0.0.1366.768" timestamp="1606872881640" />
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606870777919">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1606870777919" />
+    <state x="413" y="143" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1606299008454">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="413" y="143" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.768@0.0.1366.768" timestamp="1606299008454" />
+    <state x="463" y="85" key="FileChooserDialogImpl" timestamp="1607073558858">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="85" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1607073558858" />
+    <state width="1323" height="239" key="GridCell.Tab.0.bottom" timestamp="1606880411906">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="239" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1606880411906" />
+    <state width="1323" height="239" key="GridCell.Tab.0.center" timestamp="1606880411906">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="239" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1606880411906" />
+    <state width="1323" height="239" key="GridCell.Tab.0.left" timestamp="1606880411906">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="239" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1606880411906" />
+    <state width="1323" height="239" key="GridCell.Tab.0.right" timestamp="1606880411906">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="239" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1606880411906" />
+    <state width="1323" height="239" key="GridCell.Tab.1.bottom" timestamp="1606880411921">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="239" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1606880411921" />
+    <state width="1323" height="239" key="GridCell.Tab.1.center" timestamp="1606880411921">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="239" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1606880411921" />
+    <state width="1323" height="239" key="GridCell.Tab.1.left" timestamp="1606880411906">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="239" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1606880411906" />
+    <state width="1323" height="239" key="GridCell.Tab.1.right" timestamp="1606880411921">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="239" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1606880411921" />
+    <state x="345" y="91" key="NewModule_or_Project.wizard" timestamp="1607073575567">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="345" y="91" key="NewModule_or_Project.wizard/0.0.1366.768@0.0.1366.768" timestamp="1607073575567" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1607068002569">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1607068002569" />
+    <state x="501" y="166" key="chooseDestDirectoryDialog" timestamp="1606630064257">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="501" y="166" key="chooseDestDirectoryDialog/0.0.1366.768@0.0.1366.768" timestamp="1606630064257" />
+    <state x="350" y="269" key="com.intellij.ide.util.TipDialog" timestamp="1607073532566">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="350" y="269" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1607073532566" />
+    <state x="58" y="12" key="new project wizard" timestamp="1607067289591">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="58" y="12" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1607067289591" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606869473188">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1606869473188" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day04/src.main/java/bjpowernode/test/mj/Test/SingleCircleLinkedListTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/code$Operator04.ic" NAME="Operator04 Coverage Results" MODIFIED="1606385710300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

@@ -1,0 +1,42 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: feng
+ * @Date: 2021-02-25 10:25:33
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="/src/main/webapp/js/jquery-1.11.1-min.js"></script>
+    <script type="text/javascript">
+
+        function showOne() {
+            //去除one中的内容
+            var one = document.getElementById("one").value;
+            //
+            alert(one);
+
+            alert($("#one").val());
+        }
+
+
+        function showTwo(){
+            var two = $(".two").val();
+            alert(two)
+        }
+    </script>
+</head>
+
+<body>
+    <input id="one" value="one -----------"><br>
+    <input class="two" value="two1 -----------"><br>
+    <input class="two" value="two2 -----------"><br>
+    <input type="button" value="操作one文本框" onclick="showOne()">
+    <input type="button" value="操作two文本框" onclick="showTwo()">
+</body>
+
+</html>

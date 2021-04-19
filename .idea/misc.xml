@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$USER_HOME$/Desktop/springmvc_003_datasubmit" />
+    <file type="web" url="file://D:/BaiduNetdiskDownload/CRM代码/workspaceForCrm/workspaceForCrm/crm" />
+    <file type="web" url="file://D:/BaiduNetdiskDownload/Screenshots/代码/代码/atcrowdfunding-web" />
+    <file type="web" url="file://$PROJECT_DIR$/213/crm" />
+    <file type="web" url="file://$PROJECT_DIR$/ajax" />
+    <file type="web" url="file://$PROJECT_DIR$/crm" />
+    <file type="web" url="file://$PROJECT_DIR$/deptManage" />
+    <file type="web" url="file://$PROJECT_DIR$/mybatis-proxy" />
+    <file type="web" url="file://$PROJECT_DIR$/myweb/myweb" />
+    <file type="web" url="file://$PROJECT_DIR$/springMVC" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_003_datasubmit" />
+    <file type="web" url="file://$PROJECT_DIR$/springMVC_datasubmit" />
+    <file type="web" url="file://$PROJECT_DIR$/springMVCstusub" />
+    <file type="web" url="file://$PROJECT_DIR$/xiaomi_ssm_0312" />
+    <file type="web" url="file://$PROJECT_DIR$/../Download/02-动力节点-学生-毕业设计-超市订单管理系统源码/02-supermarket" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/myweb/myweb/pom.xml" />
+        <option value="$PROJECT_DIR$/springMVCstusub/pom.xml" />
+        <option value="$USER_HOME$/Desktop/springmvc_003_datasubmit/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_003_datasubmit/pom.xml" />
+        <option value="$PROJECT_DIR$/213/crm/pom.xml" />
+        <option value="$PROJECT_DIR$/jedis/jedis/pom.xml" />
+        <option value="$PROJECT_DIR$/213/crm/crm/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

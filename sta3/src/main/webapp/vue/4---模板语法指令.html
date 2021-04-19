@@ -1,0 +1,55 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: feng
+ * @Date: 2021-02-28 08:52:13
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="/src/main/webapp/js/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+
+		<p v-if="seen">现在可以看到我吗？v-if</p>
+
+
+		<p v-if="seen">现在可以看到我吗？v-show</p>
+		<p></p>
+		<p></p>
+		<ul>
+			<h2>v-for数组</h2>
+			<li v-for="item,index in items" :key="index">
+				{{idnex}}{{item.msg}}
+			</li>
+			<h2>v-for对象</h2>
+			<li v-for="value,key in object" :key="key">
+				{{key}}:{{value}}
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		var vue = new Vue({
+			el: "#app",
+			data: {
+				items: [
+					{ msg: "food" }, { msg: "bar" }
+				],
+				seen: false,
+				object: {
+					title:'How to do lists in Vue',
+					author:'123',
+					publshedAt:'2016-04-10'
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

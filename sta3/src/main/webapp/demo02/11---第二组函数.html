@@ -1,0 +1,63 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: feng
+ * @Date: 2021-02-25 11:21:09
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>		
+		<script src="/src/main/webapp/js/jquery-1.11.1-min.js">
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn1").on("click",function(){
+					$("div").hide(2000)
+				})
+				$("#btn2").on("click",function(){
+					$("div").show(2000)
+				})
+				$("#btn3").on("click",function(){
+					$("select").empty();
+				})
+				$("#btn4").on("click",function(){
+					$("select").remove();
+				})
+				$("#btn5").on("click",function(){
+					$(".three").append("<b>hahaha</b>")
+				})
+			})
+		</script>
+	</head>
+	<body>
+		
+		<p>显示和隐藏div</p>
+		<div id="one">我是第一个one</div>
+		<div id="two">我是第二个two</div>
+		<br><br>
+		<p>remove和empty</p>
+		<select>
+			<option>狮子</option>
+			<option>豹子</option>
+			<option>虎子</option>
+		</select>
+		<select>
+			<option>清华</option>
+			<option>北大</option>
+			<option>人大</option>
+		</select>
+		<br><br>
+		<p>append追加元素</p>
+		<div class="three">我是父元素1--> </div><br>
+		<div class="three">我是父元素2--> </div><br>	
+		
+		<input type="button" id="btn1" value="隐藏所有div"><br />
+		<input type="button" id="btn2" value="显示全部div"><br />
+		<input type="button" id="btn3" value="删除下拉列表中的选项"><br />
+		<input type="button" id="btn4" value="删除整个下拉列表"><br />
+		<input type="button" id="btn5" value="追加元素"><br />
+		
+	</body>
+</html>

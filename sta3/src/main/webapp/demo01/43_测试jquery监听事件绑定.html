@@ -1,0 +1,152 @@
+
+<html>
+	<head></head>
+ 
+	<body>
+		  
+		  <table border=2 align=center>
+			<tr>
+			   <td><input type="checkbox" id="one" />全选/全不选</td>
+			   <td>部门编号</td>
+			   <td>部门名称</td>
+			   <td>部门位置</td>
+			</tr>
+			 <!--此处this指向当前标签的DOM对象-->
+			 <tr >
+			   <td><input type="checkbox" name='ck' /></td>
+			  
+			   <td>10</td>
+			   <td>销售部门</td>
+			   <td>西二旗</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>20</td>
+			   <td>客服部门</td>
+			   <td>西三旗</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			<tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+			 <tr >
+			   <td><input type="checkbox" name='ck'/></td>
+			   <td>30</td>
+			   <td>技术部门</td>
+			   <td>五道口</td>
+			</tr>
+ 
+ 
+		  </table>
+		 <script type="text/javascript" src="../js/jquery1.js">
+		 </script>
+		 <script type="text/javascript">
+ 
+				  window.onload = main;
+				  function fun1(){
+					 //得到标题行checkbox的checked属性值
+					 var flag =$("#one").attr("checked");
+					 //定位所有数据行上checkbox对应的DOM					
+					 //依次修饰每一个数据行中checkbox的checked值
+					 $(".ck").attr("checked",flag);
+				  }
+				  //基于DOM对象为所有数据行绑定onmouseover与onmouseout
+				  //对应的处理函数
+
+				  function main(){
+					 //在标题行checkbox上将onclick与fun1绑定
+					 $("#one").bind("onclick",fun1);
+					 //对所有数据行上将onmouseover与fun2绑定
+					 $("tr:gt(0)").bind("onmouseover",fun2);
+					 //对所有数据行上将onmouseout与fun3绑定
+					 $("tr:gt(0)").bind("onmouseout",fun3)
+				  }
+ 
+				   function fun2(){                                                                                    
+					  //this:指向鼠标悬停的标签关联的DOM对象
+					  $(this).css("backgroundColor","red")
+				   }
+				   function fun3(){
+					  //this:指向鼠标悬停的标签关联的DOM对象
+					 $(this).css("backgroundColor","white")
+				   }
+		 </script>
+	
+	</body>
+   
+ 
+ </html>

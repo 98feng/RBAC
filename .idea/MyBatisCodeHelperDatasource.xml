@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="addSerializeUid" value="true" />
+        <option name="baseClassSearchXml" value="true" />
+        <option name="batchInsert" value="true" />
+        <option name="generateService" value="true" />
+        <option name="generateServiceInterface" value="true" />
+        <option name="generatedClassPathList">
+          <list>
+            <option value="E:\bjpowernode\deptManage\src\main\java\com\bjpowernode\deptmanage\workbench\domain" />
+          </list>
+        </option>
+        <option name="javaMapperPackage" value="com.bjpowernode.dao" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/xiaomi_ssm_0312/src/main/java" />
+        <option name="javaModelPackage" value="com.bjpowernode.domain" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/xiaomi_ssm_0312/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="xiaomi_ssm_0312" />
+        <option name="lombokDataAnnotation" value="true" />
+        <option name="lombokNoArgsConstructor" value="true" />
+        <option name="mapperAnnotaion" value="true" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="deptManage">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.dao" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/deptManage/src/main/java" />
+                  <option name="javaModelPacakge" value="com.domain" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/deptManage/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.bjpowernode.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/deptManage/src/main/java" />
+                  <option name="javaServicePackage" value="com.bjpowernode.service.Impl" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/deptManage/src/main/java" />
+                  <option name="xmlPackage" value="mapperxml" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/deptManage/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="mybatis">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.bjpowernode.dao" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/mybatis/src/main/java" />
+                  <option name="javaModelPacakge" value="com.bjpowernode.domain" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/mybatis/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.bjpowernode.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/mybatis/src/main/java" />
+                  <option name="javaServicePackage" value="com.bjpowernode.service.Impl" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/mybatis/src/main/java" />
+                  <option name="xmlPackage" value="com.bjpowernode.dao" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/mybatis/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="mybatis-one2many">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.bjpowernode.dao" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/mybatis-one2many/src/main/java" />
+                  <option name="javaModelPacakge" value="com.bjpowernode.domain" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/mybatis-one2many/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.bjpowernode.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/mybatis-one2many/src/main/java" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/mybatis-one2many/src/main/java" />
+                  <option name="xmlPackage" value="com.bjpowernode.dao" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/mybatis-one2many/src/main/java/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="mybatis-proxy">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.bjpowernode.dao" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/mybatis-proxy/src/main/java" />
+                  <option name="javaModelPacakge" value="com.bjpowernode.domain" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/mybatis-proxy/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.bjpowernode.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/mybatis-proxy/src/main/java" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/mybatis-proxy/src/main/java" />
+                  <option name="xmlPackage" value="com.bjpowernode.dao" />
+                  <option name="xmlPath" value="E:\bjpowernode\mybatis-proxy\src\main\java\com\bjpowernode\dao" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="mybatis_spring">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.bjpowernode.dao" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/mybatis_spring/src/main/java" />
+                  <option name="javaModelPacakge" value="com.bjpowernode.domain" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/mybatis_spring/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.bjpowernode.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/mybatis_spring/src/main/java" />
+                  <option name="javaServicePackage" value="com.bjpowernode.service" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/mybatis_spring/src/main/java" />
+                  <option name="xmlPackage" value="com.bjpowernode.dao" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/mybatis_spring/src/main/java/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="xiaomi_ssm_0312">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.bjpowernode.dao" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/xiaomi_ssm_0312/src/main/java" />
+                  <option name="javaModelPacakge" value="com.bjpowernode.domain" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/xiaomi_ssm_0312/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.bjpowernode.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/xiaomi_ssm_0312/src/main/java" />
+                  <option name="javaServicePackage" value="com.bjpowernode.service" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/xiaomi_ssm_0312/src/main/java" />
+                  <option name="xmlPackage" value="com.bjpowernode.dao" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/xiaomi_ssm_0312/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="noJdbcType" value="true" />
+        <option name="p3CComment" value="true" />
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="deptmanage:tbl_dept_activity">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="" />
+                  <option name="moduleName" value="deptManage" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="deptmanage:tbl_dept_activity_remark">
+              <value>
+                <TableGenerateConfig>
+                  <option name="javaModelName" value="Remark" />
+                  <option name="moduleName" value="deptManage" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="deptmanage:tbl_emp_activity">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="TblEmpActivity" />
+                  <option name="moduleName" value="deptManage" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="deptmanage:tbl_user">
+              <value>
+                <TableGenerateConfig>
+                  <option name="columnOverrideList">
+                    <list>
+                      <MyColumnOverride>
+                        <option name="columnName" value="id" />
+                        <option name="typeHandler" value="uuid" />
+                      </MyColumnOverride>
+                    </list>
+                  </option>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="User" />
+                  <option name="moduleName" value="deptManage" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="one2many:customer">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Customer" />
+                  <option name="moduleName" value="mybatis-one2many" />
+                  <option name="updateBatch" value="true" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="one2many:orders">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Orders" />
+                  <option name="moduleName" value="mybatis-one2many" />
+                  <option name="updateBatch" value="true" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="ssm:accounts">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="javaModelName" value="Accounts" />
+                  <option name="moduleName" value="mybatis_spring" />
+                  <option name="updateBatch" value="true" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="ssm:book">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="columnOverrideList">
+                    <list>
+                      <MyColumnOverride>
+                        <option name="columnName" value="bookid" />
+                        <option name="javaProperty" value="id" />
+                      </MyColumnOverride>
+                      <MyColumnOverride>
+                        <option name="columnName" value="bookname" />
+                        <option name="javaProperty" value="name" />
+                      </MyColumnOverride>
+                    </list>
+                  </option>
+                  <option name="generatedKey" value="bookid" />
+                  <option name="javaModelName" value="Book" />
+                  <option name="moduleName" value="mybatis-proxy" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="updateBatch" value="true" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="ssm:student">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Student" />
+                  <option name="moduleName" value="mybatis" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="true" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="ssm:users">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="javaModelName" value="Users" />
+                  <option name="moduleName" value="mybatis_spring" />
+                  <option name="updateBatch" value="true" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="xiaomissm:admin">
+              <value>
+                <TableGenerateConfig>
+                  <option name="batchInsert" value="true" />
+                  <option name="generatedKey" value="a_id" />
+                  <option name="javaModelName" value="Admin" />
+                  <option name="moduleName" value="xiaomi_ssm_0312" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="updateBatch" value="true" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="updateBatch" value="true" />
+        <option name="xmlMapperPackage" value="com.bjpowernode.dao" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/xiaomi_ssm_0312/src/main/resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>

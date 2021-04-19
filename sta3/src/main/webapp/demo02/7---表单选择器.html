@@ -1,0 +1,62 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: feng
+ * @Date: 2021-02-25 11:21:09
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+
+<script src="/src/main/webapp/js/jquery-1.11.1-min.js">
+</script>
+
+<script type="text/javascript">
+	function fun1() {
+		var $obj = $(":text")
+		alert($obj.val())
+	}
+
+	function fun2() {
+		var $obj = $(":radio")
+		for (var i = 0; i < $obj.length; i++) {
+			var dom = $obj[i];
+			alert(dom.value);
+		}
+	}
+
+	function fun3() {
+		var $obj = $(":checked")
+		for (var i = 0; i < $obj.length; i++) {
+			// var dom = $obj[i];
+			// alert(dom.value);
+
+			//jQuery对象的用法
+			alert($($obj[i]).val());
+
+		}
+	}
+</script>
+
+<body>
+	文本框:<input id="txt" type="text" value="我是type=text"><br />
+	性别：<br />
+	<input type="radio" name="sex" value="man">男<br>
+	<input type="radio" name="sex" value="woman">女<br>
+	爱好：<br />
+	<input type="checkbox" name="hobby" value="bike">骑行<br />
+	<input type="checkbox" name="hobby" value="football">足球<br />
+	<input type="checkbox" name="hobby" value="music">音乐<br>
+	<br>
+	<p>功能按钮</p>
+	<input type="button" value="读取text的值" onclick="fun1()"><br />
+	<input type="button" value="读取radio的值" onclick="fun2()"><br />
+	<input type="button" value="读取checkbox的值" onclick="fun3()"><br />
+
+</body>
+
+</html>

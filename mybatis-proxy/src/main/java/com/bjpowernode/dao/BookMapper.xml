@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.dao.BookMapper">
+  <resultMap id="BaseResultMap" type="com.bjpowernode.ioc.domain.Book">
+    <!--@mbg.generated-->
+    <!--@Table book-->
+    <id column="bookid" property="id" />
+    <result column="bookname" property="name" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    bookid, bookname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from book
+    where bookid = #{id}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from book
+    where bookid = #{id}
+  </delete>
+  <insert id="insert" keyColumn="bookid" keyProperty="id" parameterType="com.bjpowernode.ioc.domain.Book" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into book (bookname)
+    values (#{name})
+  </insert>
+  <insert id="insertSelective" keyColumn="bookid" keyProperty="id" parameterType="com.bjpowernode.ioc.domain.Book" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into book
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        bookname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bjpowernode.ioc.domain.Book">
+    <!--@mbg.generated-->
+    update book
+    <set>
+      <if test="name != null">
+        bookname = #{name},
+      </if>
+    </set>
+    where bookid = #{id}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bjpowernode.ioc.domain.Book">
+    <!--@mbg.generated-->
+    update book
+    set bookname = #{name}
+    where bookid = #{id}
+  </update>
+  <update id="updateBatch" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update book
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="bookname = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when bookid = #{item.id} then #{item.name}
+        </foreach>
+      </trim>
+    </trim>
+    where bookid in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.id}
+    </foreach>
+  </update>
+  <insert id="batchInsert" keyColumn="bookid" keyProperty="id" parameterType="map" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into book
+    (bookname)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.name})
+    </foreach>
+  </insert>
+</mapper>

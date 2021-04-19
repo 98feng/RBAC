@@ -1,0 +1,7 @@
+1、静态属性暂时无法注入
+2、不能在存的时候放代理对象，不然还是无法注入
+3、要想赋值成功并使用代理对象，显示使用getBean
+/**
+     * 在容器中取UserServiceImpl对象并使用动态代理打印错误信息
+     */
+    static UserService us = (UserService) ServiceFactory.getService(objectApplicationContext.getBean(UserService.class));

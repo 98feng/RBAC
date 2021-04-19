@@ -1,0 +1,3 @@
+LoginAct = bjpowernode
+LoginPwd : 666
+admin = bjpowernode

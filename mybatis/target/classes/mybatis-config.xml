@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+    <properties resource="jdbc.properties"/>
+    <!--settings：控制mybatis全局行为-->
+    <settings>
+        <!--设置mybatis输出日志-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!--设置mapper.xml返回值别名-->
+    <typeAliases>
+        <package name="com.bjpowernode.domain"/>
+    </typeAliases>
+<!--    enviroments:环境变量的配置
+        default：指定本次开发使用的具体环境变
+        -->
+    <environments default="development">
+        <environment id="development">
+<!--        enviroment:具体环境变量的配置
+            id:为了提供给environments的default使用的，本环境变量的配置的名称-->
+            <transactionManager type="MANAGED"/>
+            <!--dataSource:数据源的配置
+            type :
+            JNDI:java命名目录接口，由服务器统管 理数据库连接池
+            POOLED:使用MyBatis框架提供的数据库连接池
+            UNPOOLED:使用MyBat is框架提供的数据库连接池
+            -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.user}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+
+    <!--sql映射文件的位置-->
+    <!--这个包中所有mapper文件都加载-->
+    <mappers>
+        <package name="com.bjpowernode.dao"/>
+    </mappers>
+</configuration>
